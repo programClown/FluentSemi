@@ -1,0 +1,56 @@
+<u:UrsaWindow
+    DragDrop.AllowDrop="True"
+    FontFamily="{DynamicResource Font}"
+    FontWeight="{DynamicResource FontWeight}"
+    Icon="/Assets/avalonia-logo.ico"
+    IsFullScreenButtonVisible="False"
+    IsManagedResizerVisible="{OnPlatform {x:False},
+                                         Linux={x:True}}"
+    Title="FluentSemi"
+    WindowStartupLocation="CenterScreen"
+    x:Class="FluentSemi.Views.MainWindow"
+    x:CompileBindings="True"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:iri="https://irihi.tech/shared"
+    xmlns:u="https://irihi.tech/ursa"
+    xmlns:views="clr-namespace:FluentSemi.Views"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <u:UrsaWindow.RightContent>
+        <views:TitleBarRightContent />
+    </u:UrsaWindow.RightContent>
+    <u:UrsaWindow.LeftContent>
+        <StackPanel Orientation="Horizontal">
+            <u:Avatar
+                Classes="ExtraSmall"
+                Margin="4,0"
+                Source="/Assets/avalonia-logo.ico" />
+            <TextBlock
+                FontWeight="ExtraBold"
+                HorizontalAlignment="Left"
+                IsHitTestVisible="False"
+                Text="FluentSemi实例"
+                VerticalAlignment="Center">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="100%,100%" StartPoint="0%,0%">
+                        <GradientStop Color="#FFF02FC2" Offset="0" />
+                        <GradientStop Color="#FF6094EA" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="Black" Opacity="0.1" />
+                </TextBlock.Effect>
+            </TextBlock>
+        </StackPanel>
+    </u:UrsaWindow.LeftContent>
+    <u:UrsaWindow.Styles>
+        <!--  This style is created to demonstrate Dialog StyleClass feature. This style is applied to dialogs in MainWindow OverlayDialogHost  -->
+        <Style Selector="u|DefaultDialogControl.Custom">
+            <Style Selector="^ /template/ Button#PART_OKButton">
+                <Setter Property="Content" Value="CUSTOM" />
+                <Setter Property="iri:ClassHelper.Classes" Value="Warning" />
+            </Style>
+        </Style>
+    </u:UrsaWindow.Styles>
+    <views:MainView Margin="0,30,0,0" />
+
+</u:UrsaWindow>

@@ -1,0 +1,102 @@
+<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="FluentSemi.Views.MainView"
+    x:DataType="vm:MainViewModel"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="clr-namespace:FluentAvalonia.UI.Controls;assembly=FluentAvalonia"
+    xmlns:vm="clr-namespace:FluentSemi.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DockPanel>
+        <Border ClipToBounds="True" Margin="0,10,0,10">
+            <ui:NavigationView
+                AlwaysShowHeader="False"
+                DockPanel.Dock="Left"
+                FontFamily="{DynamicResource Font}"
+                FontSize="14"
+                FontWeight="Bold"
+                IsBackButtonVisible="False"
+                IsBackEnabled="False"
+                IsPaneToggleButtonVisible="False"
+                IsSettingsVisible="False"
+                IsTabStop="False"
+                OpenPaneLength="140"
+                PaneDisplayMode="Left"
+                SelectionFollowsFocus="False"
+                x:Name="Nav">
+                <ui:NavigationView.MenuItems>
+                    <ui:NavigationViewItem
+                        FontFamily="{DynamicResource Font}"
+                        IsSelected="True"
+                        Name="NavLaunch"
+                        Tag="launch">
+                        <DockPanel>
+                            <Image Height="16" Width="16">
+                                <Image.Source>
+                                    <DrawingImage>
+                                        <DrawingImage.Drawing>
+                                            <GeometryDrawing Brush="{DynamicResource TextColor}">
+                                                <GeometryDrawing.Geometry>
+                                                    <PathGeometry Figures="M511.9999694824219,67.73333740234375C529.5999755859375,67.73333740234375,547.199951171875,73.60000610351562,561.066650390625,85.33333587646484L573.8666381835938,96C708.2666625976562,211.1999969482422,814.933349609375,302.9333190917969,893.8666381835938,369.0666809082031L925.8666381835938,396.79998779296875C940.7999877929688,409.6000061035156 949.3333129882812,426.6666564941406 949.3333129882812,448 949.3333129882812,486.3999938964844 917.3333129882812,518.4000244140625 878.933349609375,518.4000244140625L832,518.4000244140625 832,876.7999877929688C832,904.5333251953125,810.6666870117188,928,782.933349609375,930.1333618164062L618.6666870117188,930.1333618164062C588.7999877929688,930.1333618164062,565.3333129882812,906.6666870117188,565.3333129882812,876.7999877929688L565.3333129882812,691.2000122070312C565.3333129882812,678.4000244140625,556.7999877929688,669.8666381835938,544,669.8666381835938L480,669.8666381835938C467.20001220703125,669.8666381835938,458.6666564941406,678.4000244140625,458.6666564941406,691.2000122070312L458.6666564941406,876.7999877929688C458.6666564941406,904.5333251953125,437.3333435058594,928,409.6000061035156,930.1333618164062L245.3333282470703,930.1333618164062C215.46665954589844,930.1333618164062,192,906.6666870117188,192,876.7999877929688L192,518.4000244140625 145.06666564941406,518.4000244140625C108.80000305175781,518.4000244140625,76.80000305175781,490.6666564941406,74.66666412353516,452.26666259765625L74.66666412353516,448C74.66666412353516,426.6666564941406 83.19999694824219,407.4666748046875 100.26667022705078,394.6666564941406 155.73333740234375,347.73333740234375 226.13333129882812,288 311.4666748046875,215.46665954589844L462.9333190917969,85.33333587646484C476.79998779296875,73.60000610351562,494.3999938964844,67.73333740234375,511.9999694824219,67.73333740234375z" />
+                                                </GeometryDrawing.Geometry>
+                                            </GeometryDrawing>
+                                        </DrawingImage.Drawing>
+                                    </DrawingImage>
+                                </Image.Source>
+                            </Image>
+                            <TextBlock
+                                FontFamily="{DynamicResource Font}"
+                                FontSize="15"
+                                Foreground="{DynamicResource TextColor}"
+                                Margin="12,0,0,0"
+                                Text="启动" />
+                        </DockPanel>
+                    </ui:NavigationViewItem>
+                    <ui:NavigationViewItem
+                        FontFamily="{DynamicResource Font}"
+                        Name="NavTask"
+                        Tag="task">
+                        <ui:NavigationViewItem.InfoBadge>
+                            <ui:InfoBadge
+                                FontFamily="{DynamicResource Font}"
+                                FontSize="15"
+                                IsVisible="False"
+                                Value="0"
+                                x:Name="TaskInfoBadge" />
+                        </ui:NavigationViewItem.InfoBadge>
+                        <DockPanel>
+                            <Image Height="16" Width="16">
+                                <Image.Source>
+                                    <DrawingImage>
+                                        <DrawingImage.Drawing>
+                                            <GeometryDrawing Brush="{DynamicResource TextColor}">
+                                                <GeometryDrawing.Geometry>
+                                                    <PathGeometry Figures="F1 M 15.693359 5 C 16.103516 5.000001 16.494141 5.083009 16.865234 5.249023 C 17.236328 5.41504 17.560221 5.636395 17.836914 5.913086 C 18.113605 6.189779 18.334961 6.513672 18.500977 6.884766 C 18.666992 7.255859 18.75 7.646484 18.75 8.056641 L 18.75 14.443359 C 18.75 14.853516 18.666992 15.244141 18.500977 15.615234 C 18.334961 15.986328 18.113605 16.310221 17.836914 16.586914 C 17.560221 16.863607 17.236328 17.084961 16.865234 17.250977 C 16.494141 17.416992 16.103516 17.5 15.693359 17.5 L 4.306641 17.5 C 3.896484 17.5 3.505859 17.416992 3.134766 17.250977 C 2.763672 17.084961 2.439779 16.863607 2.163086 16.586914 C 1.886393 16.310221 1.665039 15.986328 1.499023 15.615234 C 1.333008 15.244141 1.25 14.853516 1.25 14.443359 L 1.25 8.056641 C 1.25 7.633464 1.334635 7.236328 1.503906 6.865234 C 1.673177 6.494141 1.901042 6.170248 2.1875 5.893555 C 2.473958 5.616862 2.80599 5.398764 3.183594 5.239258 C 3.561198 5.079754 3.958333 5.000001 4.375 5 L 6.25 5 L 6.25 2.5 C 6.25 2.324219 6.282552 2.161459 6.347656 2.011719 C 6.41276 1.86198 6.502278 1.730145 6.616211 1.616211 C 6.730143 1.502279 6.861979 1.412762 7.011719 1.347656 C 7.161458 1.282553 7.324218 1.25 7.5 1.25 L 12.5 1.25 C 12.675781 1.25 12.840169 1.282553 12.993164 1.347656 C 13.146158 1.412762 13.277994 1.500652 13.388672 1.611328 C 13.499349 1.722006 13.587239 1.853842 13.652344 2.006836 C 13.717447 2.159832 13.75 2.324219 13.75 2.5 L 13.75 5 Z M 12.5 2.5 L 7.5 2.5 L 7.5 5 L 12.5 5 Z " />
+                                                </GeometryDrawing.Geometry>
+                                            </GeometryDrawing>
+                                        </DrawingImage.Drawing>
+                                    </DrawingImage>
+                                </Image.Source>
+                            </Image>
+                            <TextBlock
+                                FontFamily="{DynamicResource Font}"
+                                FontSize="15"
+                                Foreground="{DynamicResource TextColor}"
+                                Margin="12,0,0,0"
+                                Text="任务" />
+                        </DockPanel>
+                    </ui:NavigationViewItem>
+                </ui:NavigationView.MenuItems>
+            </ui:NavigationView>
+        </Border>
+        <Border ClipToBounds="True" CornerRadius="{DynamicResource MainCornerRadius}">
+            <ContentControl
+                Content="{Binding CurrentPage}"
+                DockPanel.Dock="Right"
+                Name="FrameView" />
+        </Border>
+    </DockPanel>
+</UserControl>
