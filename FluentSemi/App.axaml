@@ -15,13 +15,6 @@
                 <ResourceInclude Source="/Styles/IconPath.axaml" />
                 <ResourceInclude Source="/Styles/Theme.axaml" />
             </ResourceDictionary.MergedDictionaries>
-            <!-- <Color x:Key="SystemAccentColor">#00feff</Color> -->
-            <!-- <Color x:Key="SystemAccentColorLight1">#00feff</Color> -->
-            <!-- <Color x:Key="SystemAccentColorLight2">#00feff</Color> -->
-            <!-- <Color x:Key="SystemAccentColorLight3">#00feff</Color> -->
-            <!-- <Color x:Key="SystemAccentColorDark1">#00feff</Color> -->
-            <!-- <Color x:Key="SystemAccentColorDark2">#00feff</Color> -->
-            <!-- <Color x:Key="SystemAccentColorDark3">#00feff</Color> -->
             <FontFamily x:Key="Font">avares://FluentSemi/Assets#MiSans</FontFamily>
             <FontWeight x:Key="FontWeight">Bold</FontWeight>
             <system:Double x:Key="MainOpacity">1</system:Double>
