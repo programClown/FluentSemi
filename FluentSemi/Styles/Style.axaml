@@ -6,11 +6,5 @@
     </Design.PreviewWith>
     <!--  Add Styles Here  -->
 
-    <Style Selector="Panel#PART_PaneRoot">
-        <Setter Property="Transitions">
-            <Transitions>
-                <BrushTransition Duration="0:0:0.3" Property="Background" />
-            </Transitions>
-        </Setter>
-    </Style>
+
 </Styles>

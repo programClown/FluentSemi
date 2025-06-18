@@ -68,9 +68,9 @@ public class App : Application
             // More info: https://docs.avaloniaui.net/docs/guides/development-guides/data-validation#manage-validationplugins
             DisableAvaloniaDataAnnotationValidation();
 
-            var window = new MainWindow();
-            window.DataContext = new MainViewModel();
+            var window = ServiceLocator.GetRequiredService<MainWindow>();
             desktop.MainWindow = window;
+            window.DataContext = ServiceLocator.GetRequiredService<MainViewModel>();
             VisualRoot = window;
             Notification = new WindowNotificationManager(TopLevel);
             Toast = new WindowToastManager(TopLevel);
@@ -80,8 +80,8 @@ public class App : Application
         }
         else if (ApplicationLifetime is ISingleViewApplicationLifetime singleView)
         {
-            var view = new MainView();
-            view.DataContext = new MainViewModel();
+            var view =  ServiceLocator.GetRequiredService<MainView>();
+            view.DataContext = ServiceLocator.GetRequiredService<MainViewModel>();
             singleView.MainView = view;
 
             VisualRoot = view.Parent as MainWindow;
@@ -92,8 +92,8 @@ public class App : Application
             Toast = new WindowToastManager(TopLevel);
         }
 
-        Notification.Position = NotificationPosition.BottomRight;
-        Toast.MaxItems = 2;
+        // Notification.Position = NotificationPosition.BottomRight;
+        // Toast.MaxItems = 2;
         base.OnFrameworkInitializationCompleted();
     }
 

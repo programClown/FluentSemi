@@ -1,24 +1,32 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key="Dark">
-            <SolidColorBrush Color="#2c2c2c" x:Key="1x" />
-            <SolidColorBrush Color="#941E1E1E" x:Key="2x" />
-            <SolidColorBrush Color="#ffffff" x:Key="TextColor" />
-            <SolidColorBrush Color="#242424" x:Key="TitleBarColor" />
-            <SolidColorBrush Color="#1e1e1e" x:Key="WindowBg" />
-            <SolidColorBrush Color="#7e7e7e" x:Key="GrayColor" />
-            <SolidColorBrush Color="#e1e9f0" x:Key="BorderBrushColor" />
-            <SolidColorBrush Color="#383838" x:Key="ListBoxItemSelectedBackground" />
+            <!--  Header 背景色  -->
+            <SolidColorBrush Color="#222226" x:Key="HeaderBgColor" />
+            <!--  侧边栏背景色  -->
+            <SolidColorBrush Color="#222226" x:Key="SidebarBgColor" />
+            <!--  侧边栏边框颜色  -->
+            <SolidColorBrush Color="#343434" x:Key="SidebarBorderColor" />
+            <!--  内容区域背景色  -->
+            <SolidColorBrush Color="#111113" x:Key="ContentBgColor" />
+            <!--  当前菜单项的背景色  -->
+            <SolidColorBrush Color="#38383b" x:Key="SelectedMenuItemBgColor" />
+            <!--  主题切换按钮鼠标悬浮背景色  -->
+            <SolidColorBrush Color="#38383B" x:Key="ThemeSwitchButtonHoverBgColor" />
         </ResourceDictionary>
         <ResourceDictionary x:Key="Light">
-            <SolidColorBrush Color="#FFE9F6FF" x:Key="1x" />
-            <SolidColorBrush Color="#f6fafd" x:Key="2x" />
-            <SolidColorBrush Color="#f6fafd" x:Key="WindowBg" />
-            <SolidColorBrush Color="#333333" x:Key="TextColor" />
-            <SolidColorBrush Color="#e7f5ff" x:Key="TitleBarColor" />
-            <SolidColorBrush Color="#7e7e7e" x:Key="GrayColor" />
-            <SolidColorBrush Color="#e1e9f0" x:Key="BorderBrushColor" />
-            <SolidColorBrush Color="#DFEFFF" x:Key="ListBoxItemSelectedBackground" />
+            <!--  Header 背景色  -->
+            <SolidColorBrush Color="#F5F5F6" x:Key="HeaderBgColor" />
+            <!--  侧边栏背景色  -->
+            <SolidColorBrush Color="#F5F5F6" x:Key="SidebarBgColor" />
+            <!--  侧边栏边框颜色  -->
+            <SolidColorBrush Color="#E4E5E6" x:Key="SidebarBorderColor" />
+            <!--  内容区域背景色  -->
+            <SolidColorBrush Color="White" x:Key="ContentBgColor" />
+            <!--  当前菜单项的背景色  -->
+            <SolidColorBrush Color="#DADADA" x:Key="SelectedMenuItemBgColor" />
+            <!--  主题切换按钮鼠标悬浮背景色  -->
+            <SolidColorBrush Color="#DDDDDE" x:Key="ThemeSwitchButtonHoverBgColor" />
         </ResourceDictionary>
     </ResourceDictionary.ThemeDictionaries>
 </ResourceDictionary>

@@ -1,5 +1,7 @@
 ﻿using Avalonia;
 using System;
+using FluentSemi.Extensions;
+using Microsoft.Extensions.Hosting;
 
 namespace FluentSemi;
 
@@ -14,8 +16,20 @@ sealed class Program
 
     // Avalonia configuration, don't remove; also used by visual designer.
     public static AppBuilder BuildAvaloniaApp()
-        => AppBuilder.Configure<App>()
+    {
+        var host = Host.CreateDefaultBuilder()
+            .ConfigureServices(services =>
+            {
+                services.AddViewModels();
+                services.AddServices();
+                services.AddViews();
+            }).Build();
+        ServiceLocator.Host = host;
+        
+        return AppBuilder.Configure<App>()
             .UsePlatformDetect()
             .WithInterFont()
             .LogToTrace();
+    }
+        
 }
